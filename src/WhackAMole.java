@@ -30,7 +30,7 @@ public class WhackAMole {
 		}
 	}
 	
-	private boolean place (int x, int y) {
+	public boolean place (int x, int y) {
 		boolean retValue;
 		if (this.moleGrid[x][y] != 'M') {
 			this.moleGrid[x][y] = 'M';
@@ -41,7 +41,7 @@ public class WhackAMole {
 		return retValue;
 	}
 	
-	private void printGrid() {
+	public void printGrid() {
 		for (int i = 0; i < this.moleGrid.length; i++) {
 			for (int j = 0; j < this.moleGrid[i].length; j++) {
 				System.out.print(this.moleGrid[i][j] + " ");
@@ -50,7 +50,7 @@ public class WhackAMole {
 		}
 	}
 	
-	private void printGridToUser() {
+	public void printGridToUser() {
 		for (int i = 0; i < this.moleGrid.length; i++) {
 			for (int j = 0; j < this.moleGrid[i].length; j++) {
 				if(this.moleGrid[i][j] == 'W') {
@@ -63,7 +63,7 @@ public class WhackAMole {
 		}
 	}
 	
-	private void whack(int x, int y) {
+	public void whack(int x, int y) {
 		this.attemptsLeft--;
 		
 		if (this.moleGrid[x][y] == 'M') {
